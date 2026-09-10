@@ -207,6 +207,7 @@ Power BI Data Model
 Interactive Dashboards
    ↓
 Business Insights
+```
 
 ---
 
