@@ -1,6 +1,6 @@
 # Project Phoenix — Zomato Product Analytics
 
-> An end-to-end product analytics project using SQL, MySQL, Python and Power BI to analyze customer conversion, acquisition performance, ordering behaviour and restaurant marketplace dynamics.
+> An end-to-end product analytics project analyzing **41K+ records** using SQL, MySQL, Python and Power BI to evaluate customer conversion, acquisition performance, ordering behaviour and restaurant marketplace dynamics.
 
 ---
 
@@ -8,6 +8,7 @@
 
 | Metric | Result |
 |---|---:|
+| **Records Analyzed** | **41K+** |
 | Restaurant Views | **27K** |
 | Added to Cart | **12K** |
 | Checkout Started | **8K** |
@@ -16,7 +17,6 @@
 | Highest Revenue Channel | **Organic** |
 | Organic Revenue | **~₹1.55M** |
 | Organic Orders | **~1.8K** |
-
 *Dashboard values are rounded as displayed in Power BI.*
 
 ---
