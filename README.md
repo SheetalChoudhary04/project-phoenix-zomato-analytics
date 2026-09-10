@@ -17,6 +17,7 @@
 | Highest Revenue Channel | **Organic** |
 | Organic Revenue | **~₹1.55M** |
 | Organic Orders | **~1.8K** |
+
 *Dashboard values are rounded as displayed in Power BI.*
 
 ---
