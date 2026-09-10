@@ -207,3 +207,13 @@ Power BI Data Model
 Interactive Dashboards
    ↓
 Business Insights
+
+---
+
+## 👩‍💻 Author
+
+### Sheetal Choudhary
+
+**Data Analytics Portfolio Project**
+
+**Skills:** SQL • MySQL • Python • Power BI • Data Cleaning • Data Analysis • Data Visualization • Business Analytics
