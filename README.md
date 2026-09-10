@@ -181,8 +181,7 @@ The dashboard analyzes:
 
 ## 🛠️ Tools & Technologies
 
-- **MySQL** — Database creation and data management
-- **SQL** — Data validation, transformation, KPI calculation and analysis
+- **MySQL** — Data management, Data validation, transformation, KPI calculation and analysis
 - **Python** — Data exploration and supporting analysis
 - **Power BI** — Data modeling, DAX, KPI visualization and dashboards
 - **GitHub** — Documentation and project version control
