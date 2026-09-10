@@ -1,209 +1,209 @@
-# Project Phoenix --- Zomato Product Analytics
+# Project Phoenix — Zomato Product Analytics
 
-**Product Analytics for a Food-Delivery Marketplace**
+> An end-to-end product analytics project using SQL, MySQL, Python and Power BI to analyze customer conversion, acquisition performance, ordering behaviour and restaurant marketplace dynamics.
 
-SQL • MySQL • Python • Power BI
+---
 
-## 📌 Project Overview
+## 📊 Project at a Glance
 
-Project Phoenix is a product analytics case study focused on
-understanding customer acquisition, conversion, ordering behaviour,
-retention and restaurant-marketplace characteristics for a food-delivery
-platform.
+| Metric | Result |
+|---|---:|
+| Restaurant Views | **27K** |
+| Added to Cart | **12K** |
+| Checkout Started | **8K** |
+| Converted Orders | **6K** |
+| View → Order Conversion | **~22%** |
+| Highest Revenue Channel | **Organic** |
+| Organic Revenue | **~₹1.55M** |
+| Organic Orders | **~1.8K** |
 
-The project combines a **real, publicly sourced Zomato Bangalore
-restaurant dataset** with an **explicitly simulated
-customer/session/order layer** created for product-analytics practice.
+*Dashboard values are rounded as displayed in Power BI.*
 
-> **Important:** The simulated customer, session and order data is not
-> proprietary Zomato data. Findings from this layer represent patterns
-> in the simulated dataset and should not be interpreted as actual
-> Zomato customer behaviour.
+---
 
-## 🎯 Business Problem
+## 🎯 Business Objective
 
-> **How can a food-delivery platform increase second-order conversion
-> among first-time customers to improve customer retention and
-> revenue?**
+The objective of Project Phoenix is to understand the customer journey and identify the factors that influence conversion, revenue and repeat purchasing behaviour.
 
-## 📊 Project Scale
+The analysis focuses on:
 
-  Metric                             Value
-  ----------------------------- ----------
-  Customers                         10,000
-  Sessions                        \~30,000
-  Orders                             5,903
-  Clean restaurants                 41,263
-  Restaurant locations                  92
-  Cuisine tags                       2,367
-  Restaurant types                      87
-  Average order value              ₹858.61
-  Session-to-order conversion       19.68%
+- Customer conversion and funnel drop-offs
+- Acquisition channel performance
+- Revenue and order contribution by channel
+- One-time vs. repeat customer behaviour
+- Restaurant marketplace distribution
+- Restaurant pricing, ratings and popularity
+- Online-order adoption
 
-## 🗂️ Data
+---
 
-### Real data
+## 🔍 Key Findings
 
-Restaurant-level fields include restaurant name, location, cuisine,
-approximate cost for two, rating, votes, online-order availability and
-restaurant type.
+### 1. Customer Funnel
 
-The original dataset contained **51,717 rows**. After cleaning and
-selecting the analytical fields, **41,263 rows** were loaded for
-analysis with no missing values in the retained fields.
+The customer journey moves through four major stages:
 
-### Simulated behavioural data
+**27K Restaurant Views → 12K Carts → 8K Checkouts → 6K Conversions**
 
-Python was used to generate customers, sessions and orders. The
-simulated layer was designed with stage-wise funnel drop-offs and
-internally consistent relationships for product-analytics practice.
+This represents approximately **22% conversion from restaurant views to completed orders**.
 
-## 🏗️ Data & Analysis Workflow
+The largest volume drop occurs between **restaurant viewing and adding to cart**, making this an important stage for conversion optimization.
 
-``` text
-Data Sources
-     ↓
-Data Cleaning & Preparation
-     ↓
+---
+
+### 2. Acquisition Channels: Revenue vs. Volume
+
+**Organic** was the strongest channel in terms of both order volume and revenue.
+
+- ~**1.8K orders** from Organic
+- ~**₹1.55M revenue** from Organic
+- Search generated approximately **1.2K orders**
+- Referral generated approximately **1.1K orders**
+- Paid Ads and Social generated lower order volumes
+
+This highlights the importance of comparing channels using **both revenue and order volume**, rather than relying on conversion rate alone.
+
+---
+
+### 3. Conversion Rate Is Relatively Consistent Across Channels
+
+Conversion rates across the five acquisition channels were close to **20%**.
+
+| Channel | Approx. Conversion |
+|---|---:|
+| Paid Ads | **~20%** |
+| Organic | **~20%** |
+| Search | **~20%** |
+| Referral | **~19–20%** |
+| Social | **~19%** |
+
+The relatively small difference in conversion rates suggests that **channel scale and revenue contribution** are important when evaluating acquisition performance.
+
+---
+
+### 4. Organic Leads Revenue Performance
+
+Organic contributed approximately **₹1.55M in order value**, making it the highest-revenue acquisition channel in the analysis.
+
+Search and Referral each contributed approximately **₹1.0M**, while Paid Ads and Social contributed lower revenue.
+
+This creates a useful business question:
+
+> Should additional acquisition investment focus on increasing high-performing organic traffic, or improving the efficiency of lower-volume paid channels?
+
+---
+
+### 5. Order Activity Over Time
+
+Monthly order volume remained relatively stable, generally ranging around **430–530 orders per month**.
+
+Revenue also remained relatively consistent, with monthly revenue broadly around **₹0.38M–₹0.48M**.
+
+This indicates a relatively stable ordering pattern rather than a single month driving the majority of business performance.
+
+---
+
+### 6. Restaurant Marketplace
+
+The restaurant marketplace analysis examines:
+
+- Restaurant distribution by location
+- Restaurant type
+- Cuisine
+- Customer ratings
+- Customer votes
+- Approximate cost for two
+- Online-order availability
+
+**BTM** appears as the largest restaurant cluster among the locations shown, with approximately **3.8K listings**, followed by Koramangala 5th Block and HSR.
+
+This highlights the concentration of restaurant supply across specific locations and provides a basis for location-level marketplace analysis.
+
+---
+
+## 📈 Power BI Dashboards
+
+### Customer & Order Dashboard
+
+The dashboard analyzes:
+
+- Funnel performance
+- Orders over time
+- Revenue over time
+- Acquisition channels
+- Revenue by acquisition channel
+- Orders by acquisition channel
+
+![Customer Order Dashboard](Customer_Order_Dashboard.png)
+
+---
+
+### Restaurant Marketplace Dashboard
+
+The dashboard analyzes:
+
+- Restaurant distribution
+- Location
+- Restaurant type
+- Ratings
+- Popularity
+- Pricing
+- Online-order adoption
+
+![Restaurant Marketplace Dashboard](Restaurant_Marketplace_Dashboard.png)
+
+---
+
+## 🧠 Business Questions Answered
+
+### Customer & Conversion
+1. How many users move from restaurant viewing to ordering?
+2. Where is the biggest funnel drop-off?
+3. What is the overall conversion rate?
+
+### Acquisition
+4. Which channel generates the most orders?
+5. Which channel generates the most revenue?
+6. How do conversion rates compare across channels?
+
+### Customer Behaviour
+7. How many customers place multiple orders?
+8. How does repeat-customer behaviour differ from one-time customers?
+9. What are the differences in order value, delivery time and ratings?
+
+### Marketplace
+10. Which locations have the highest restaurant concentration?
+11. Which restaurant types dominate the marketplace?
+12. How do restaurant ratings, popularity and pricing vary?
+13. How widely is online ordering adopted?
+
+---
+
+## 🛠️ Tools & Technologies
+
+- **MySQL** — Database creation and data management
+- **SQL** — Data validation, transformation, KPI calculation and analysis
+- **Python** — Data exploration and supporting analysis
+- **Power BI** — Data modeling, DAX, KPI visualization and dashboards
+- **GitHub** — Documentation and project version control
+
+---
+
+## 🔄 Project Workflow
+
+```text
+Raw Data
+   ↓
+Data Cleaning & Validation
+   ↓
 MySQL Database
-     ↓
+   ↓
 SQL Analysis
-     ↓
-Power BI Dashboard
-```
-
-## 🔍 Analysis Performed
-
-### 1. Acquisition Analysis
-
-Compared acquisition channels on order volume, revenue, session-to-order
-conversion and repeat-order behaviour.
-
-### 2. Customer Funnel
-
-**30,000 sessions → 26,944 restaurant views → 12,065 cart additions →
-7,885 checkouts → 5,903 orders**
-
-Overall session-to-order conversion was **19.68%**.
-
-The largest funnel bottleneck was the **restaurant-view → add-to-cart**
-stage, where only **44.8%** of restaurant viewers added an item to cart.
-
-### 3. Retention Analysis
-
--   **72.44%** of ordering customers were one-time customers.
--   **27.56%** placed repeat orders.
--   Repeat customers generated **45.12% of revenue**.
-
-This made first-to-second-order conversion the strongest product
-opportunity identified in the analysis.
-
-### 4. Restaurant Marketplace Analysis
-
-The restaurant dataset was analysed across location, restaurant type,
-cuisine, price, rating, votes and online-order availability.
-
-**65.68% of restaurants offered online ordering**, while **34.32% did
-not**.
-
-## 💡 Key Insights
-
--   The biggest funnel opportunity occurs between **restaurant viewing
-    and cart addition**.
--   A relatively small share of repeat customers contributes a
-    disproportionately large share of revenue: **27.56% of ordering
-    customers → 45.12% of revenue**.
--   Conversion rates across acquisition channels are relatively close,
-    suggesting that funnel improvement may have greater leverage than
-    acquisition volume alone.
--   Online-order adoption is widespread but uneven across the restaurant
-    marketplace.
--   Higher vote volumes are associated with higher average ratings
-    across popularity buckets, but individual restaurant popularity does
-    not guarantee a higher rating.
-
-## 🚀 Product Recommendations
-
-1.  **Improve first-to-second-order conversion**
-    -   Post-first-order re-engagement
-    -   Targeted second-order incentives
-    -   Personalized restaurant/cuisine recommendations
-2.  **Reduce restaurant-view → cart friction**
-    -   Improve restaurant information and menu clarity
-    -   Make ratings/reviews, delivery ETA and pricing more transparent
-    -   Improve personalized restaurant discovery
-3.  **Evaluate acquisition channels using multiple metrics**
-    -   Compare order volume, conversion and repeat behaviour rather
-        than orders alone.
-4.  **Improve restaurant discovery**
-    -   Combine rating and review volume rather than relying on a single
-        quality signal.
-
-## 📊 Power BI Dashboards
-
-### Dashboard 1 --- Customer & Order Performance
-
-Includes KPI cards, acquisition-channel analysis, conversion funnel,
-order/revenue trends, conversion rate by channel and order distribution
-by rating.
-
-### Dashboard 2 --- Restaurant Marketplace Analysis
-
-Includes restaurant distribution by location, restaurant rating vs
-votes, restaurant cost vs rating and online-order availability.
-
-## 🛠️ Tools Used
-
-  Tool                     Purpose
-  ------------------------ --------------------------------------------------------------
-  Python (Pandas, NumPy)   Data cleaning and simulation
-  MySQL                    Relational database and SQL analysis
-  SQL                      KPI, funnel, acquisition, retention and marketplace analysis
-  Power BI                 Dashboarding, DAX and visualization
-  GitHub                   Project documentation and version control
-
-## ⚠️ Limitations
-
--   Customer, session and order data is simulated and cannot establish
-    real Zomato customer behaviour.
--   The analysis is descriptive/associative rather than causal.
--   Dashboard figures are rounded for display; underlying calculations
-    were used for exact values.
--   Restaurant cuisine counts are tag-level, so a restaurant may appear
-    under multiple cuisine categories.
-
-## 🔮 Future Work
-
-With real event-level marketplace data, the project could be extended to
-cohort retention, A/B testing of second-order interventions,
-churn/reorder propensity modelling, cancellation and delivery analysis,
-and more granular customer-journey analysis.
-
-## 📁 Repository Structure
-
-``` text
-project-phoenix/
-│
-├── README.md
-├── PowerBI/
-│   └── Zomato_Product_Analytics.pbix
-├── Report/
-│   └── Zomato_Product_Analytics_Report.pdf
-├── Dashboard/
-│   ├── dashboard_customer_order.png
-│   └── dashboard_restaurant_marketplace.png
-├── SQL/
-│   └── analysis_queries.sql
-└── Data/
-    └── README.md
-```
-
-**Note:** Raw datasets are not included unless redistribution rights
-allow it.
-
-## 👤 Author
-
-**Sheetal**\
-B.Tech Chemical Engineering, IIT Gandhinagar\
-Product Analytics Portfolio Project
-
+   ↓
+KPI & Business Analysis
+   ↓
+Power BI Data Model
+   ↓
+Interactive Dashboards
+   ↓
+Business Insights
